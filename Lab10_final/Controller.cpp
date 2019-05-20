@@ -50,13 +50,13 @@ bool Controller::UpdateMovie(std::string title, std::string newGenre, std::strin
 	{
 		throw std::exception("Invalid parameters!");
 	}
-	
-    Movie updatedMovie(title, newGenre, newLink, yearOfReleaseInt, numberOfLikesInt);
-    validator_->validate(updatedMovie);
-    repo_->updateMovie(title, updatedMovie);
+
+	Movie updatedMovie(title, newGenre, newLink, yearOfReleaseInt, numberOfLikesInt);
+	validator_->validate(updatedMovie);
+	repo_->updateMovie(title, updatedMovie);
 	writeToFile();
 
-    return true;
+	return true;
 }
 
 

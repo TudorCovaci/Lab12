@@ -18,8 +18,7 @@ public:
     Output:
         -
     */
-    virtual void addMovie(const Movie& movieToAdd);
-
+	virtual void addMovie(const Movie& movieToAdd);
     /*Finds the first movie in the repo that has a given title.
     Input:
         - title - string, the title that is searched in the repo

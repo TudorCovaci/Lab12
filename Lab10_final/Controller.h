@@ -29,6 +29,7 @@ public:
     MovieRepo* getRepo();
     void next();
     Movie& getCurrent();
+	std::vector<Movie> filterByGenreAndLikes(std::string genre, std::string likes);
 
 	void setFilePath(std::string pathOfFile);
 	void writeToFile();

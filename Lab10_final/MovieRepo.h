@@ -62,6 +62,7 @@ public:
     */
     std::vector<Movie>& getElements() { return elements_; }
 
+	std::vector<Movie>filterMovies(std::string genre, int numberOfLikes);
     /*Stream-insertion operator
     Input:
         - outStream, output stream

@@ -74,6 +74,21 @@ Movie& Controller::getCurrent()
     if (iterator_->valid())
         return iterator_->getCurrent();
 }
+std::vector<Movie> Controller::filterByGenreAndLikes(std::string genre, std::string likes)
+{
+	int numberOfLikes;
+	try 
+	{
+		numberOfLikes = atoi(likes.c_str());
+	}
+	catch(std::exception& ex)
+	{
+		throw std::exception("Invalid number of likes!");
+	}
+	std::vector<Movie> filteredVector = repo_->filterMovies(genre, numberOfLikes);
+	return filteredVector;
+
+}
 MovieRepo* Controller::getRepo()
 {
     return repo_;

@@ -21,6 +21,7 @@ private:
 	QPushButton* deleteButton_;
 	QPushButton* updateButton_;
 	QPushButton* updateMovieButton_;
+	
 	QPushButton* cancelButton_;
 	
 	Controller* controller_;

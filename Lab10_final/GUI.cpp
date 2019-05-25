@@ -111,7 +111,7 @@ int main(int argc, char** argv)
 	mainWindow->setLayout(mainLayout);
 	app.setApplicationName("Movie Database");
 	GUI_Admin* adminHalf = new GUI_Admin(controller);
-	GUI_User* userHalf = new GUI_User(adminHalf);
+	GUI_User* userHalf = new GUI_User(adminHalf, controller);
 	mainLayout->addWidget(adminHalf);
 	mainLayout->addWidget(userHalf);	
 	mainWindow->show();

@@ -42,19 +42,28 @@ class GUI_User : public QWidget
 private:
 	MovieRepo* myList_;
 	QListWidget* myListWidget_;
+	QListWidget* filterListWidget_;
 	QPushButton* saveButton_;
 	QPushButton* playButton_;
+	QPushButton* openFilterPageButton_;
+	QPushButton* filterButton_;
 	Controller* myListController_;
+	QLineEdit* genreLineEdit_;
+	QLineEdit* likesLineEdit_;
 	GUI_Admin* adminGUI_;
+	Controller* controller_;
 public:
 	GUI_User(QWidget* parent = Q_NULLPTR) {}
 	GUI_User(const GUI_User& guiUser) {}
-	GUI_User(GUI_Admin* adminGUI);
+	GUI_User(GUI_Admin* adminGUI, Controller* controller);
 private:
 	void display();
 	void connectSignalsAndSlots();
 	void initGUI();
 	void saveButtonHandler();
+	void openFilterPageButtonHandler();
+	void filterButtonHandler();
+	void playButtonHandler();
 	std::vector<std::string> tokenize(std::string line);
 signals:
 	void myListUpdatedSignal();

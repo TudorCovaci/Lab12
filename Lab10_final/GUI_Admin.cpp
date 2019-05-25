@@ -62,9 +62,11 @@ void GUI_Admin::initGUI()
 	addButton_ = new QPushButton("&Add");
 	deleteButton_ = new QPushButton("&Delete");
 	updateButton_ = new QPushButton("&Update");	
+	
 	gridLayout->addWidget(addButton_);
 	gridLayout->addWidget(deleteButton_);
 	gridLayout->addWidget(updateButton_);
+
 	vertLayout->addWidget(buttons);
 }
 void GUI_Admin::display()

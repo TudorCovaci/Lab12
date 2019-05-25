@@ -43,6 +43,14 @@ std::ostream& operator<<(std::ostream& outStream, MovieRepo& repo)
     }
     return outStream;
 }
+std::vector<Movie> MovieRepo::filterMovies(std::string genre, int numberOfLikes)
+{
+	std::vector<Movie> filteredVector;
+	for (auto movie : elements_)
+		if (movie.getGenre() == genre && movie.getNumberOfLikes() >= numberOfLikes)
+			filteredVector.push_back(movie);
+	return filteredVector;
+}
 void MovieRepo::writeToFile(std::string path)
 {
 	std::fstream saveFile_(path, std::ios::out);
